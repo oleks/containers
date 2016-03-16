@@ -1,0 +1,74 @@
+\begin{frame}
+
+\begin{center}
+
+\large \textbf{A ``container'' is a process that wraps another process}
+
+\end{center}
+
+\pause
+
+\vspace{\fill}
+
+Use cases:
+
+\begin{itemize}
+
+\item Set up a temporary resource, and tear it down afterwards.
+
+\begin{itemize}
+
+\item Temporary directories, temporarily pivot the root, etc.
+
+\end{itemize}
+
+\item Run the subprocess with reduced privleges.
+
+\begin{itemize}
+
+\item Principle of Least Privelege
+
+\end{itemize}
+
+\item Monitor the subprocess.
+
+\begin{itemize}
+
+\item \texttt{strace}, \texttt{time}, etc.
+
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{Containers: Benefits}
+
+Piggyback on the operating system process abstraction:
+
+\begin{itemize}
+
+\item Robustness
+
+\begin{itemize}
+
+\item Control returns to the parent process regardless of whether the process
+exitted normally or e.g. segfaulted.
+
+\end{itemize}
+
+\item Isolation
+
+\begin{itemize}
+
+\item Rely on the underlying operating system to enforce, memory, filesystem,
+and other resource isolations.
+
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}

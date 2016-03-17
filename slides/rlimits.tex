@@ -1,0 +1,50 @@
+\begin{frame}
+
+\frametitle{Enforcing (some) Resource Limits}
+
+\begin{columns}
+
+\column{\dimexpr\paperwidth-50pt}
+
+\begin{flushright}
+
+\begin{quote}
+
+The \texttt{getrlimit()} and \texttt{setrlimit()} system calls get and set
+resource limits respectively.  Each resource has an associated soft and hard
+limit \ldots The hard limit acts as a ceiling for the  soft  limit:  an
+unprivileged process may set only its soft limit to a value in the range from 0
+up to the hard limit, and (irreversibly) lower its hard limit.
+
+\end{quote}
+
+--- \texttt{getrlimit(2), 2015-12-28}
+
+\end{flushright}
+
+\end{columns}
+
+\begin{itemize}
+
+\item Lower hard limits.
+
+\item \texttt{exec(3)} subprocess
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+
+\begin{center}
+
+\Huge \textbf{DEMO}
+
+\bigskip
+
+\large \texttt{rlimits}
+
+\end{center}
+
+\end{frame}

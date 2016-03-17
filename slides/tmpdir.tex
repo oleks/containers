@@ -1,0 +1,91 @@
+\begin{frame}
+
+\question{What is the best way to create a temporary directory, a
+``scratchspace''?}
+
+\pause
+
+\answer{Use a container!}
+
+\begin{itemize}
+
+\item Create a temporary directory (TMPDIR).
+
+\item Pass TMPDIR as a parameter to a subprocess.
+
+\item Destroy TMPDIR when subprocess exits.
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+
+\begin{center}
+
+\Huge \textbf{DEMO}
+
+\bigskip
+
+\large \texttt{tmpdir}
+
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+
+\frametitle{\texttt{tmpdir} --- Robust and Versatile}
+
+\begin{center}
+
+Many programming languages come with ``dispose patterns'':
+
+\end{center}
+
+\begin{columns}
+
+\begin{column}{0.3\textwidth}
+
+\begin{lstlisting}[language=java]
+try {
+  ...
+}
+finally {
+  ...
+}
+\end{lstlisting}
+
+\end{column}
+
+\begin{column}{0.3\textwidth}
+
+\begin{lstlisting}[language=java]
+using (... = ...)
+{
+  ...
+}
+\end{lstlisting}
+
+\end{column}
+
+\begin{column}{0.3\textwidth}
+
+\begin{lstlisting}[language=python]
+with ... as ...:
+  ...
+\end{lstlisting}
+
+\end{column}
+
+\end{columns}
+
+\begin{center}
+
+But they don't (trivially) work for \underline{\textbf{arbitrary programs}}.
+
+\end{center}
+
+\end{frame}

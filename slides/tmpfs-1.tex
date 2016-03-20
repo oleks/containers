@@ -1,0 +1,52 @@
+\begin{frame}
+
+\question{But why don't we just use \texttt{tmpfs}?}
+
+\begin{itemize}
+
+\item \texttt{tmpfs} is a completely virtual, in-memory filesystem ---
+filesystem contents is purged upon unmount.
+
+\end{itemize}
+
+\pause
+
+\vspace{\fill}
+
+\answer{Filesystem contents is purged \emph{only} upon unmount.}
+
+\begin{itemize}
+
+\item For a typical user that might mean \underline{\textbf{upon reboot}}.
+
+\item And leaving your tempdirs around until reboot\ldots
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+
+\question{Now for a better use of \texttt{tmpfs}\ldots}
+
+\begin{center}
+
+Mount a new \texttt{tmpfs} volume, having the limits you need (e.g. 10MB), and
+hereby bound filesystem use in the tempdir\footnote{Thanks to David Plassmann
+for this idea.}.
+
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+
+\question{Sigh\ldots Mounting (even \texttt{tmpfs}!) demands root priveleges.}
+
+\begin{itemize}
+
+\end{itemize}
+
+\end{frame}
